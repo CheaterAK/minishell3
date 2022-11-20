@@ -69,7 +69,6 @@ int	unset(char *tmp, t_argv *cmd, int status, int i)
 int	ft_unset(t_argv *cmd)
 {
 	t_argv	*env;
-	t_argv	*exp;
 	size_t	i;
 	int		status;
 	char	*tmp;
@@ -78,7 +77,6 @@ int	ft_unset(t_argv *cmd)
 	i = 1;
 	status = 0;
 	env = g_et->array[0];
-	exp = g_et->array[1];
 	while (i < cmd->len)
 	{
 		env->try_index = 0;

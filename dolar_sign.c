@@ -23,14 +23,15 @@ char	*check_dolar(char *line, int i)
 	return (tmp);
 }
 
-char	*get_status(char **line, int status, int i)
+int	get_status(char **line, int status, int i)
 {
 	char	*tmp;
 
 	tmp = str3join(ft_substr(*line, 0, i), ft_itoa(status), ft_strdup(*line + i
 				+ 2));
 	free(*line);
-	return (tmp);
+	*line = tmp;
+	return (1);
 }
 
 char	*new_line(char *line, int i, int l)

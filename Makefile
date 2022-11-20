@@ -13,7 +13,7 @@ CC =  gcc
 READLINE_LIB = -L${HOME}/goinfre/.brew/opt/readline/lib
 READLINE_INC = -I${HOME}/goinfre/.brew/opt/readline/include
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -g
 
 .PHONY: all clean fclean re
 

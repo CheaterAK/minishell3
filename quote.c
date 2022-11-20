@@ -17,11 +17,9 @@
 char	*clear_this(char *line, int c, int status)
 {
 	int		i;
-	t_argv	*env;
 	char	*ret;
 
 	ret = line;
-	env = g_et->array[0];
 	while (*line)
 	{
 		if (*line == (char)c)
@@ -91,7 +89,6 @@ int	func(char *line, char **tmp, int *status, char **str)
 	free(*tmp);
 	*tmp = ft_strjoin(*str, tmp2);
 	free(*str);
-	free(tmp2);
 	*str = *tmp;
 	return (res);
 }

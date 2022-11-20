@@ -93,9 +93,7 @@ int	heredoc_check(t_argv *cmd)
 
 int	lexer(t_argv *cmd, char *line, int status)
 {
-	int		i;
 
-	i = 0;
 	while (line && *line)
 	{
 		line = lexer_token(cmd, line);

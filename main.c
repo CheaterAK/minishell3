@@ -102,12 +102,10 @@ void	minishell(int *status)
 int	main(int argc, char **argv, char **envp)
 {
 	int		status;
-	t_argv	*env;
 
 	g_et = argv_new(NULL, NULL);
 	argv_push(g_et, argv_new((void **)envp, (void *(*)(void *))ft_strdup));
 	argv_push(g_et, argv_new(NULL, NULL));
-	env = g_et->array[0];
 	status = 0;
 	(void)argc;
 	(void)argv;

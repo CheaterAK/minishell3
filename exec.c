@@ -22,7 +22,6 @@ static char	*get_path(char *cmd)
 	t_argv	*path;
 	char	**tmp;
 	char	*str;
-	char	*ret;
 
 	if (!ft_strncmp("/", cmd, 1) || !ft_strncmp("./", cmd, 2)
 		|| !ft_strncmp("../", cmd, 3))
@@ -31,7 +30,6 @@ static char	*get_path(char *cmd)
 		return (str3join(ft_strdup(getenv("$HOME")), ft_strdup("/"),
 				ft_strdup(cmd + 1)));
 	str = get_env(ft_strdup("$PATH"));
-	ret = NULL;
 	if (!*str)
 	{
 		free(str);
